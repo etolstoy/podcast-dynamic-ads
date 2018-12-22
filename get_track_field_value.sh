@@ -22,7 +22,7 @@ then
     exit;
 fi
 
-result=`curl --request GET --url "https://api.soundcloud.com/me/tracks/$track_id?oauth_token=$token" | jq {$field_name}`
+result=`curl --request GET --url "https://api.soundcloud.com/tracks/$track_id?oauth_token=$token" | jq {$field_name}`
 playback_count=(`echo $result | tr '""' ' '`)
 
 echo ${playback_count[3]}
