@@ -14,10 +14,11 @@ echo "Adv paid count: $4"
 
 ##### Downloading and saving track
 
-./download_file.sh 548832504 download.mp3
+download_name=origin-$1.mp3
+./download_file.sh $1 $download_name
 
 ##### Integrating adv
-#./integrate.sh
+./integrate.sh $download_name $2 $3
 
 ##### Getting current play count
 
